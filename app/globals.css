@@ -95,6 +95,24 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+.header {
+  display: flex;
+  align-items:center;
+  justify-content: space-between;
+  padding: 2% 5%;
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+}
+
+.nav_bar {
+  display: flex;
+  gap: 0.5rem;
+}
+
+
 a {
   color: inherit;
   text-decoration: none;
