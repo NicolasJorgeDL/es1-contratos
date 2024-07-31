@@ -1,10 +1,30 @@
 .main {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
-  padding: 6rem;
+  padding: 1rem 6rem;
+  gap: 1.5rem;
   min-height: 100vh;
+}
+
+.ultimos_contratos {
+  display: flex;
+  gap: 1rem;
+}
+
+.relatorio_gastos {
+  gap: 1rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.relatorio_gastos__select {
+  display: flex;
+  font-size: large;
+  text-align: center;
+  padding: 1rem;
+  align-items: center; 
 }
 
 .description {
