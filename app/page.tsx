@@ -1,23 +1,11 @@
 'use client'
 import CardContrato from "./components/card_contrato";
-import styles from "./page.module.css";
+import Relatorio from './components/relatorio';
 import { useState } from "react";
+import styles from "./page.module.css";
 
 export default function Home() {
   const [relatorioSelected, setRelatorioSelected] = useState("mensal");
-
-  function renderRelatorio(value:string){
-    switch(value) {
-      case "mensal":
-        return (<h1>mensal</h1>);
-      case "anual":
-        return (<h1>Anual</h1>);
-      case "data":
-        return (<h1>Aqui complicou</h1>);
-      default: 
-        return (<></>);
-    }
-  }
 
   function renderUltimosContratos(){
     // fetch data chamando os serviços
@@ -82,14 +70,14 @@ export default function Home() {
       <h1>Ultimos Contratos</h1>
         {renderUltimosContratos()}            
       <h1 className={styles.relatorio_gastos}>
-        Relatório de gastos
+        Relatório de Contratos
           <select name="selectedDate" className={styles.relatorio_gastos__select} defaultValue={relatorioSelected} onChange={(e)=>{setRelatorioSelected(e.target.value); console.log(e.target.value)}}>
             <option value={"mensal"}>Mensal</option> 
             <option value={"anual"}> Anual</option> 
             <option value={"data"}>Data expecifica</option>
           </select>
       </h1>
-        {renderRelatorio(relatorioSelected)}
+        {Relatorio(relatorioSelected)}
     </main>
   );
 }

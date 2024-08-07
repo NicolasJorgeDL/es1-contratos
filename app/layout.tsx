@@ -32,6 +32,7 @@ export default function RootLayout({
         </header>
         {children}
         </body>
+        <footer className="footer">Projeto desenvolvido por Nicolas Jorge e André Brandão, para matéria de Engenharia de Software 1. <strong className="footer__destaque">UNIOESTE 2024</strong></footer>
     </html>
   );
 }
