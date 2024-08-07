@@ -21,7 +21,7 @@ export default function CardContrato(data:contrato){
     let cardColor;
     console.log(data.situacao);
     switch (data.situacao){
-        case "parado": cardColor = "yellow"; break;
+        case "paralisado": cardColor = "#1195ff"; break;
         case "em contratação": cardColor = "green"; break;
         case "cancelado": cardColor = "red"; break;
     }

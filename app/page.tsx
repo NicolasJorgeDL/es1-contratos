@@ -63,14 +63,14 @@ export default function Home() {
           dtInicial={fakeData[0].dtInicial}
           dtFinal={fakeData[0].dtFinal}
           valor={fakeData[0].valor}
-          situacao={fakeData[0].situacao}
+          situacao={"cancelado"}
         />
         <CardContrato 
           objetivo={fakeData[0].objetivo}
           dtInicial={fakeData[0].dtInicial}
           dtFinal={fakeData[0].dtFinal}
           valor={fakeData[0].valor}
-          situacao={fakeData[0].situacao}
+          situacao={"paralisado"}
         />
       </div>
     );
@@ -88,8 +88,8 @@ export default function Home() {
             <option value={"anual"}> Anual</option> 
             <option value={"data"}>Data expecifica</option>
           </select>
-        {renderRelatorio(relatorioSelected)}
       </h1>
+        {renderRelatorio(relatorioSelected)}
     </main>
   );
 }
